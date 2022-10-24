@@ -11,16 +11,14 @@ import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { AddproductsComponent } from './component/addproducts/addproducts.component';
-import { UpdateComponent } from './component/update/update.component';
 
 
 @NgModule({
   declarations: [
     ListComponent,
-    AddproductsComponent,
-    UpdateComponent
+    AddproductsComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +31,8 @@ import { UpdateComponent } from './component/update/update.component';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class ProductModule { }
