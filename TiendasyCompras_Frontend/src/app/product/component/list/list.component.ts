@@ -9,7 +9,7 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-  dsplayedColumns: string[] = [ 'name', 'description', 'productType', 'brand', 'prices','stock', 'actions'];
+  dsplayedColumns: string[] = [ 'id','name', 'description', 'productType', 'brand', 'price','stock', 'actions'];
   productDataSource: MatTableDataSource<any> = new MatTableDataSource<any>();
   productos:any
   constructor(
@@ -22,10 +22,25 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
     this.getProduct();
   }
-  agregarPerson(): void {
+  agregarProduct(): void {
     this.router.navigate(['./create'], {
       relativeTo: this.activatedRoute
     })
+  }
+  deleteProduct(product: any): void {
+    alert('Eliminado persona ' + product.name)
+    this.productService.delete(product.id).subscribe(resp=>{
+      if(resp===true){
+        this.productos.pop(product)
+      }
+    });
+  }
+  editarProduct(product: any): any {
+    alert('Editando producto ' + product.name)
+    this.router.navigate(['./update'], {
+      relativeTo: this.activatedRoute
+    })
+    return product.id;
   }
   getProduct(): void {
     this.productService.getAll().subscribe(listProduct => {

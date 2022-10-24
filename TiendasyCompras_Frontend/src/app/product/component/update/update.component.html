@@ -1,10 +1,14 @@
 <mat-card>
     <mat-card-title>
-      Nuevo Producto
+      Actualizar datos de la Persona
     </mat-card-title>
     <mat-card-content>
       <div class="form-content" [formGroup]="formProduct">
         <div class="form-control-group">
+          <mat-form-field appearance="outline">
+            <mat-label>Id</mat-label>
+            <input matInput formControlName="id">
+          </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Nombre</mat-label>
             <input matInput formControlName="name">
@@ -36,7 +40,6 @@
     </mat-card-content>
     <mat-card-footer>
       <button mat-raised-button (click)="cancelar()"> Cancelar</button>
-      <button mat-raised-button (click)="guardar()" [disabled]="formProduct.invalid"> Guardar</button>
+      <button mat-raised-button (click)="actualizar()" [disabled]="formProduct.invalid"> Actualizar</button>
     </mat-card-footer>
   </mat-card>
-  

@@ -1,4 +1,4 @@
 {
-    "appService.defaultWebAppToDeploy": "/subscriptions/b488d898-acfc-4563-96aa-c2a52212622a/AppServices/subscriptions/b488d898-acfc-4563-96aa-c2a52212622a/resourceGroups/rgraulrivera/providers/Microsoft.Web/sites/appTiendasyComprasFrontend",
+    "appService.defaultWebAppToDeploy": "",
     "appService.deploySubpath": "."
 }

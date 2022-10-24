@@ -13,12 +13,14 @@ import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {ReactiveFormsModule} from "@angular/forms";
 import { AddproductsComponent } from './component/addproducts/addproducts.component';
+import { UpdateComponent } from './component/update/update.component';
 
 
 @NgModule({
   declarations: [
     ListComponent,
-    AddproductsComponent
+    AddproductsComponent,
+    UpdateComponent
   ],
   imports: [
     CommonModule,

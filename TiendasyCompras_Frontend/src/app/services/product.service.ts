@@ -15,27 +15,22 @@ export class ProductService {
   }
 
   getAll(): Observable<any> {
-    return this.httpclient.get(`${environment.apiUrl}/person`);
+    return this.httpclient.get(`${environment.apiUrl}/product`);
   }
 
-  create(person: any): Observable<any> {
-    return this.httpclient.post(`${environment.apiUrl}/person`, person);
+  create(product: any): Observable<any> {
+    return this.httpclient.post(`${environment.apiUrl}/product`, product);
   }
 
-  update(person: any): Observable<any> {
-    return this.httpclient.put(`${environment.apiUrl}/person`, person);
+  update(product: any): Observable<any> {
+    return this.httpclient.put(`${environment.apiUrl}/product`, product);
   }
 
-  delete(idPerson: any): Observable<any> {
-    return this.httpclient.delete(`${environment.apiUrl}/person/${idPerson}`,);
-      /*.pipe(
-        tap(()=> {
-          this._refresh$.next();
-        })
-      )*/
+  delete(idProduct: any): Observable<any> {
+    return this.httpclient.delete(`${environment.apiUrl}/product/${idProduct}`,);
   }
 
-  getTypeDocument(): Observable<any> {
-    return this.httpclient.get(`${environment.apiUrl}/documentType`);
+  getTypeProduct(): Observable<any> {
+    return this.httpclient.get(`${environment.apiUrl}/productType`);
   }
 }
